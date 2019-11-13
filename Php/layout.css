@@ -1,0 +1,40 @@
+html{
+    width: 60em;
+    margin: auto;
+}
+
+body{
+    display: grid;     /*grid for the page*/
+    grid-template-columns: 4fr 1fr;
+    grid-template-rows: auto auto auto auto;
+    grid-template-areas: "header header"
+    "menu  aside"
+    "body  aside"
+    "footer  footer";
+}
+
+body > header{
+    grid-area: header;
+}
+
+#menu > ul{
+    display: flex;      /*flex box for the menu*/
+    flex-direction: row;
+    grid-area: menu;
+}
+
+#menu ul li{
+    flex-grow: 1;
+}
+
+#related{
+    grid-area: aside;
+}
+
+#news{
+    grid-area: body;
+}
+
+body > footer{
+    grid-area: footer;
+}
